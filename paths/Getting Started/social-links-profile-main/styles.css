@@ -1,6 +1,7 @@
 :root {
-  --whire: hsl(0, 0%, 100%);
+  --white: hsl(0, 0%, 100%);
   --green: hsl(75, 94%, 57%);
+  --gray-400: hsl(0, 0%, 80%);
   --gray-700: hsl(0, 0%, 20%);
   --gray-800: hsl(0, 0%, 12%);
   --gray-900: hsl(0, 0%, 8%);
@@ -15,4 +16,79 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--gray-900);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--gray-800);
+  padding: 36px;
+  border-radius: 20px;
+  min-width: 354px;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+}
+
+.image img {
+  border-radius: 50%;
+  width: 92px;
+  height: 92px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+}
+
+.title {
+  color: var(--white);
+  font-weight: var(--text-weight-medium);
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.location {
+  color: var(--green);
+  font-weight: var(--text-weight-heavy);
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.description {
+  color: var(--gray-400);
+  font-weight: var(--text-weight-light);
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.link {
+  display: inline-block;
+  background-color: var(--gray-700);
+  color: var(--white);
+  text-align: center;
+  padding: 12px 16px;
+  border-radius: 10px;
 }
