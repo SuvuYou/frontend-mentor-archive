@@ -1,0 +1,18 @@
+:root {
+  --whire: hsl(0, 0%, 100%);
+  --green: hsl(75, 94%, 57%);
+  --gray-700: hsl(0, 0%, 20%);
+  --gray-800: hsl(0, 0%, 12%);
+  --gray-900: hsl(0, 0%, 8%);
+  --text-weight-light: 400;
+  --text-weight-medium: 600;
+  --text-weight-heavy: 700;
+  --font-primary: "Inter", sans-serif;
+}
+
+* {
+  font-family: var(--font-primary);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
