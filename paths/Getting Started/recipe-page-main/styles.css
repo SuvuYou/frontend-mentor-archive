@@ -52,15 +52,23 @@ b {
 
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .card {
   background-color: var(--white);
-  padding: 32px;
   margin: 92px 0;
   border-radius: 20px;
   max-width: 640px;
+}
+
+.content-container {
+  padding: 32px;
+  padding-top: 0;
+}
+
+.image {
+  padding: 32px;
+  padding-bottom: 0;
 }
 
 .image img {
@@ -146,5 +154,25 @@ b {
   font-weight: var(--text-weight-heavy);
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
+  .card {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    min-width: 340px;
+  }
+
+  .image {
+    padding: 0;
+  }
+
+  .image img {
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  html {
+    font-size: 14px;
+  }
 }
