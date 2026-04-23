@@ -16,13 +16,32 @@
   --font-primary: "Outfit", sans-serif;
 }
 
+html {
+  font-size: 16px;
+}
+
+ul,
+ol {
+  list-style-position: outside;
+  padding-left: 1rem;
+}
+
+ul li,
+ol li {
+  padding-left: 1rem;
+}
+
+b {
+  font-weight: var(--text-weight-medium);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 
   font-family: var(--font-primary);
-  color: var(--stone-900);
+  color: var(--stone-600);
   font-weight: var(--text-weight-light);
 }
 
@@ -39,7 +58,7 @@
 .card {
   background-color: var(--white);
   padding: 32px;
-  margin: 92px;
+  margin: 92px 0;
   border-radius: 20px;
   max-width: 640px;
 }
@@ -50,9 +69,81 @@
 }
 
 .title {
+  color: var(--stone-900);
   font-family: var(--font-secondary);
-  font-size: 36px;
-  margin: 24px 0;
+  font-size: 2rem;
+  margin: 16px 0;
+  line-height: 1.5;
+  letter-spacing: 0px;
+}
+
+.description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  letter-spacing: 0px;
+}
+
+.preparation-section {
+  background-color: var(--rose-50);
+
+  border-radius: 10px;
+  margin-top: 24px;
+  padding: 24px;
+
+  font-size: 0.9rem;
+  line-height: 2;
+}
+
+.preparation-section h3 {
+  color: var(--rose-800);
+  font-weight: var(--text-weight-medium);
+
+  font-size: 1.2rem;
+}
+
+.preparation-section ul li::marker {
+  color: var(--rose-800);
+}
+
+.main-section {
+  padding: 16px 0;
+  line-height: 2;
+  font-size: 0.9rem;
+}
+
+.main-section li::marker {
+  color: var(--brown-800);
+  font-weight: var(--text-weight-heavy);
+}
+
+.main-section h3 {
+  color: var(--brown-800);
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  padding-bottom: 8px;
+}
+
+.card > .main-section ~ .main-section {
+  border-top: 1px var(--stone-150) solid;
+}
+
+.main-section table {
+  padding-top: 8px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.main-section td {
+  padding: 8px 24px;
+}
+
+.main-section tr {
+  border-bottom: 1px var(--stone-150) solid;
+}
+
+.main-section tr td:nth-child(2) {
+  color: var(--brown-800);
+  font-weight: var(--text-weight-heavy);
 }
 
 @media screen and (max-width: 375px) {
