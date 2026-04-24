@@ -18,8 +18,120 @@ html {
   font-size: 14px;
 }
 
-@media screen and (min-width: 475px) {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--font-primary);
+  color: var(--stone-600);
+  font-weight: var(--text-weight-light);
+}
+
+body {
+  background-color: var(--cream);
+
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 20px;
+  margin: 12px;
+
+  max-width: 560px;
+  min-width: 300px;
+}
+
+.image img {
+  max-width: 100%;
+  aspect-ratio: 16/11;
+  object-fit: cover;
+  object-position: 50% 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.content {
+  padding: 24px;
+}
+
+.product-type {
+  color: var(--grey);
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  text-transform: uppercase;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.product-title {
+  color: var(--black);
+  font-size: 2rem;
+  font-weight: var(--text-weight-heavy);
+  line-height: 1;
+
+  margin-bottom: 1rem;
+}
+
+.product-description {
+  color: var(--grey);
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.price {
+  display: flex;
+  gap: 16px;
+
+  margin: 24px 0;
+}
+
+.discounted-price {
+  color: var(--green-500);
+  font-size: 2rem;
+  font-weight: var(--text-weight-heavy);
+  line-height: 1;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: var(--grey);
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.add-to-cart {
+  color: var(--white);
+  background-color: var(--green-500);
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  padding: 16px 8px;
+
+  font-family: var(--font-secondary);
+  font-weight: var(--text-weight-heavy);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+@media screen and (min-width: 600px) {
   html {
     font-size: 14px;
+  }
+
+  body {
+    justify-content: center;
+  }
+
+  .image img {
+    object-position: 50% 40%;
   }
 }
