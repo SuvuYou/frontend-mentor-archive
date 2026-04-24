@@ -71,11 +71,11 @@ body {
 
 .product-title {
   color: var(--black);
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: var(--text-weight-heavy);
   line-height: 1;
-
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .product-description {
@@ -157,9 +157,5 @@ body {
     height: 100%;
     aspect-ratio: 0.75;
     border-radius: 20px 0 0 20px;
-  }
-
-  .price {
-    margin-top: auto;
   }
 }
