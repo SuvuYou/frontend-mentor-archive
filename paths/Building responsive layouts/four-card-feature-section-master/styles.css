@@ -1,0 +1,32 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(212, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(158, 42%, 18%);
+
+  --text-weight-light: 500;
+  --text-weight-heavy: 700;
+
+  --font-secondary: "Montserrat", sans-serif;
+  --font-primary: "Fraunces", serif;
+}
+
+html {
+  font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--font-primary);
+  color: var(--stone-600);
+  font-weight: var(--text-weight-light);
+}
+
+@media screen and (min-width: 600px) {
+}
