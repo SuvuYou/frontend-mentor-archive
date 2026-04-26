@@ -1,31 +1,89 @@
 :root {
   --white: hsl(0, 0%, 100%);
-  --black: hsl(212, 21%, 14%);
-  --grey: hsl(228, 12%, 48%);
-  --cream: hsl(30, 38%, 92%);
+  --grey-400: hsl(212, 6%, 44%);
+  --grey-500: hsl(234, 12%, 34%);
 
-  --green-500: hsl(158, 36%, 37%);
-  --green-700: hsl(158, 42%, 18%);
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
 
-  --text-weight-light: 500;
-  --text-weight-heavy: 700;
+  --text-weight-light: 200;
+  --text-weight-medium: 400;
+  --text-weight-heavy: 600;
 
-  --font-secondary: "Montserrat", sans-serif;
-  --font-primary: "Fraunces", serif;
+  --font: "Poppins", sans-serif;
 }
+
+/* CSS RESET --START-- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+
+  font-family: var(--font);
+  font-weight: var(--text-weight-medium);
+  color: var(--grey-500);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* CSS RESET --END-- */
 
 html {
   font-size: 14px;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-
-  font-family: var(--font-primary);
-  color: var(--stone-600);
-  font-weight: var(--text-weight-light);
 }
 
 @media screen and (min-width: 600px) {
