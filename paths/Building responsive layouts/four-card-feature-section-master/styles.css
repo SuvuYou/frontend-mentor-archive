@@ -126,6 +126,16 @@ body {
   text-align: center;
 }
 
+@media screen and (min-width: 950px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .bold-title {
+    font-size: 36px;
+  }
+}
+
 .page-description {
   color: var(--grey-400);
   font-weight: var(--text-weight-medium);
@@ -144,7 +154,7 @@ body {
 .cards-section {
   margin: 0 auto;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   display: grid;
   align-content: center;
   gap: 24px;
