@@ -92,6 +92,127 @@ html {
 
 body {
   height: 100%;
+  background-color: var(--grey-100);
+}
+
+.page {
+  max-width: 100%;
+  min-height: 100%;
+  display: grid;
+  place-content: center;
+  margin: 56px 24px;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+  max-width: 1000px;
+
+  grid-template-areas:
+    "card-1"
+    "card-2"
+    "card-3"
+    "card-4"
+    "card-5";
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  background-color: var(--purple-50);
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 35px 35px 100px var(--grey-200);
+}
+
+.card img {
+  width: 36px;
+  height: 36px;
+  border: 2px var(--purple-300) solid;
+  border-radius: 50%;
+}
+
+.card h3 {
+  font-weight: var(--text-weight-heavy);
+  font-size: 18px;
+}
+
+.card p {
+  font-weight: var(--text-weight-medium);
+  font-size: 14px;
+}
+
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 12px;
+}
+
+.card-author h4 {
+  font-weight: var(--text-weight-heavy);
+}
+
+.card-author p {
+  font-weight: var(--text-weight-medium);
+}
+
+#card-1 {
+  grid-area: card-1;
+
+  color: var(--white);
+  background-color: var(--purple-50);
+
+  img {
+    border-color: var(--purple-500);
+  }
+}
+
+#card-2 {
+  grid-area: card-2;
+
+  color: var(--white);
+  background-color: var(--purple-50);
+
+  img {
+    border-color: var(--purple-500);
+  }
+}
+
+#card-3 {
+  grid-area: card-3;
+
+  color: var(--white);
+  background-color: var(--purple-50);
+
+  img {
+    border-color: var(--purple-500);
+  }
+}
+
+#card-4 {
+  grid-area: card-4;
+
+  color: var(--white);
+  background-color: var(--purple-50);
+
+  img {
+    border-color: var(--purple-500);
+  }
+}
+
+#card-5 {
+  grid-area: card-5;
+
+  color: var(--white);
+  background-color: var(--purple-50);
+
+  img {
+    border-color: var(--purple-500);
+  }
 }
 
 @media screen and (min-width: 950px) {
