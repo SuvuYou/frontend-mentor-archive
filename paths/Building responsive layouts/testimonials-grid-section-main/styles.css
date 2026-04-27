@@ -100,13 +100,12 @@ body {
   min-height: 100%;
   display: grid;
   place-content: center;
-  margin: 56px 24px;
+  padding: 56px 24px;
 }
 
 .grid {
   display: grid;
   gap: 24px;
-  max-width: 1000px;
 
   grid-template-areas:
     "card-1"
@@ -116,18 +115,39 @@ body {
     "card-5";
 }
 
+@media screen and (min-width: 750px) {
+  .grid {
+    grid-template-areas:
+      "card-1 card-1 card-2"
+      "card-3 card-4 card-4"
+      "card-5 card-5 card-5";
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .grid {
+    grid-template-areas:
+      "card-1 card-1 card-2 card-5"
+      "card-3 card-4 card-4 card-5";
+  }
+}
+
 .card {
   display: flex;
   flex-direction: column;
   gap: 12px;
 
+  position: relative;
+
   background-color: var(--purple-50);
   border-radius: 10px;
   padding: 24px;
   box-shadow: 35px 35px 100px var(--grey-200);
+
+  z-index: 1;
 }
 
-.card img {
+.card img:not(.quotation-image) {
   width: 36px;
   height: 36px;
   border: 2px var(--purple-300) solid;
@@ -164,10 +184,10 @@ body {
   grid-area: card-1;
 
   color: var(--white);
-  background-color: var(--purple-50);
+  background-color: var(--purple-500);
 
   img {
-    border-color: var(--purple-500);
+    border-color: var(--purple-300);
   }
 }
 
@@ -175,21 +195,21 @@ body {
   grid-area: card-2;
 
   color: var(--white);
-  background-color: var(--purple-50);
+  background-color: var(--grey-500);
 
   img {
-    border-color: var(--purple-500);
+    border-color: var(--grey-400);
   }
 }
 
 #card-3 {
   grid-area: card-3;
 
-  color: var(--white);
-  background-color: var(--purple-50);
+  color: var(--grey-500);
+  background-color: var(--white);
 
   img {
-    border-color: var(--purple-500);
+    border-color: var(--grey-400);
   }
 }
 
@@ -197,23 +217,27 @@ body {
   grid-area: card-4;
 
   color: var(--white);
-  background-color: var(--purple-50);
+  background-color: var(--dark-blue);
 
   img {
-    border-color: var(--purple-500);
+    border-color: var(--purple-300);
   }
 }
 
 #card-5 {
   grid-area: card-5;
 
-  color: var(--white);
-  background-color: var(--purple-50);
+  color: var(--grey-500);
+  background-color: var(--white);
 
   img {
-    border-color: var(--purple-500);
+    border-color: var(--grey-400);
   }
 }
 
-@media screen and (min-width: 950px) {
+.quotation-image {
+  position: absolute;
+  top: 0;
+  right: 64px;
+  z-index: -1;
 }
