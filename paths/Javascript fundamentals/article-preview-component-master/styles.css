@@ -179,7 +179,9 @@ html {
   border-radius: 50%;
 }
 
-.author .icon {
+.author .inactive-icon {
+  z-index: 1;
+  border: 0;
   position: relative;
   flex-shrink: 0;
   border-radius: 50%;
@@ -189,24 +191,57 @@ html {
   margin-left: auto;
 
   transition: all 0.25s;
+
+  img {
+    width: 16px;
+    height: 16px;
+    filter: invert(48%) sepia(22%) saturate(423%) hue-rotate(174deg)
+      brightness(97%) contrast(89%);
+
+    transition: all 0.25s;
+  }
 }
 
-.author .icon img {
-  width: 16px;
-  height: 16px;
-  filter: invert(48%) sepia(22%) saturate(423%) hue-rotate(174deg)
-    brightness(97%) contrast(89%);
-
-  transition: all 0.25s;
-}
-
-.author .icon:hover {
+.author .inactive-icon:hover {
   cursor: pointer;
   background-color: var(--dark-blue);
 
   img {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(226deg)
       brightness(101%) contrast(106%);
+  }
+}
+
+.author .active-icon {
+  z-index: 1;
+  border: 0;
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--dark-blue);
+  padding: 8px;
+
+  margin-left: auto;
+
+  transition: all 0.25s;
+
+  img {
+    width: 16px;
+    height: 16px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(226deg)
+      brightness(101%) contrast(106%);
+
+    transition: all 0.25s;
+  }
+}
+
+.author .active-icon:hover {
+  cursor: pointer;
+  background-color: var(--light-greyish-blue);
+
+  img {
+    filter: invert(48%) sepia(22%) saturate(423%) hue-rotate(174deg)
+      brightness(97%) contrast(89%);
   }
 }
 
@@ -229,6 +264,8 @@ html {
   letter-spacing: 3px;
   font-size: 12px;
 
+  transition: all 0.25s;
+
   p {
     padding-right: 4px;
   }
@@ -240,10 +277,6 @@ html {
     padding: 24px;
 
     border-radius: 0 0 10px 10px;
-  }
-
-  .icon {
-    z-index: 1;
   }
 }
 
@@ -269,4 +302,8 @@ html {
     width: var(--size);
     height: var(--size);
   }
+}
+
+.hidden {
+  opacity: 0;
 }
